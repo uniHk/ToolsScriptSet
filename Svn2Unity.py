@@ -2,14 +2,16 @@
 import os
 import datetime
 
-UnityPath = r"E:\Unity\Editor\Unity.exe"
-ProjPath = r"E:\Project\\nssclient_publish\NssUnityProj"
+UnityPath = r"J:\Unity\Editor\Unity.exe"
 
 def doCMD(cmd):
     print(cmd)
     os.system(cmd)
 
 def main():
+    ProjPath = os.getcwd() + r"\NssUnityProj"
+    print(ProjPath)
+
     count = 0
     while count < 10:
         doCMD("svn cleanup")
